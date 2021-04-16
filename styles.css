@@ -16,8 +16,11 @@ body {
   --border-primary: #dfe1e5;
   --btn-primary: #f8f9fa;
   --text-primary: #222;
+  --text-lighter: #777;
   --text-secondary: #3c4043;
   --text-blue: #4285f4;
+  --text-red: #d93025;
+  --hr-primary: #ebebeb;
 }
 a {
   text-decoration: none;
@@ -29,16 +32,18 @@ a:visited {
 
 input[type="text"] {
   width: 100%;
-  padding: 1.3rem 4rem;
-  border-radius: 2.2rem;
   border: 1px solid var(--border-primary);
 }
-input[type="text"]:hover {
+input[type="text"].main-search:hover {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
-input[type="text"]:focus {
+input[type="text"].main-search:focus {
   outline: 0;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+input[type="text"].main-search {
+  padding: 1.3rem 4rem;
+  border-radius: 2.2rem;
 }
 
 button,
@@ -82,8 +87,7 @@ nav {
   font-size: 1.4rem;
   width: 100%;
   height: 3rem;
-  padding: 0.6rem;
-  margin: 1rem;
+  padding: 3rem 0.6rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -103,7 +107,7 @@ nav .navbar-right {
 }
 nav .navbar-left {
   display: flex;
-  margin-left: 1rem;
+  margin-left: 2rem;
 }
 /* END NAVBAR STYLES */
 
@@ -199,3 +203,49 @@ nav .navbar-left {
 }
 
 /* end image.html specific */
+
+/* start advanced.html specific */
+.bg-light {
+  background-color: #f1f1f1;
+}
+.container {
+  padding: 2rem 4rem;
+  margin-bottom: 1rem;
+}
+.container h2 {
+  color: var(--text-red);
+  font-weight: 400;
+  font-size: 2rem;
+}
+.hr {
+  width: 100%;
+  height: 1px;
+  background: var(--hr-primary);
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: 4fr 9fr 6fr;
+  font-size: 1.3rem;
+  gap: 1rem;
+}
+.form-grid .help-text,
+.example-search {
+  font-size: 1.1rem;
+}
+input[type="text"].adv-search {
+  padding: 0rem;
+  margin: 0.4rem 0rem;
+}
+.form-grid label,
+.form-grid div,
+.form-grid input {
+  padding: 1rem 0rem;
+}
+.form-heading {
+  font-weight: 500;
+  font-size: 1.6rem;
+}
+.form-explanation {
+  font-weight: 600;
+  color: var(--text-lighter);
+}
