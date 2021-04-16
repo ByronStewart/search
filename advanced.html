@@ -31,35 +31,44 @@
         <h2>Advanced Search</h2>
       </div>
       <div class="hr"></div>
-      <form action="#">
-        <div class="container form-grid">
-          <div class="form-heading">Find pages with...</div>
-          <div></div>
-          <div class="form-explanation">To do this in the search box</div>
-          <label for="">all these words:</label>
-          <input class="adv-search" type="text" name="" id="" />
-          <div class="help-text">
-            Type the important words:
-            <span class="example-search">tri-colour rat terrier</span>
+      <form action="http://www.google.com/search" class="mt-2" name="f">
+        <div class="container">
+          <div class="form-grid">
+            <div class="form-heading">Find pages with...</div>
+            <div></div>
+            <div class="form-explanation">To do this in the search box</div>
+            <label for="">all these words:</label>
+            <input class="adv-search" type="text" name="as_q" id="as_eq" />
+            <div class="help-text">
+              Type the important words:
+              <span class="example-search">tri-colour rat terrier</span>
+            </div>
+            <label for="">this exact word or phrase:</label>
+            <input class="adv-search" type="text" name="as_epq" id="as_epq" />
+            <div class="help-text">
+              Put exact words in quotes:
+              <span class="example-search">"rat terrier"</span>
+            </div>
+            <label for="">any of these words:</label>
+            <input class="adv-search" type="text" name="as_oq" id="as_oq" />
+            <div class="help-text">
+              Type OR between all the words you want:
+              <span class="example-search">Minature OR standard</span>
+            </div>
+            <label for="">none of these words:</label>
+            <input class="adv-search" type="text" name="as_eq" id="as_eq" />
+            <div class="help-text two-line">
+              Put a minus sign just before words that you don't want:<br />
+              <span class="example-search">-rodent, -"Jack Russell"</span>
+            </div>
+            <div></div>
+            <div class="form-submit">
+              <button type="submit" class="btn-secondary">
+                Advanced Search
+              </button>
+            </div>
           </div>
-          <label for="">this exact word or phrase:</label>
-          <input class="adv-search" type="text" name="" id="" />
-          <div class="help-text">
-            Type the important words:
-            <span class="example-search">tri-colour rat terrier</span>
-          </div>
-          <label for="">none of these words:</label>
-          <input class="adv-search" type="text" name="" id="" />
-          <div class="help-text">
-            Type the important words:
-            <span class="example-search">tri-colour rat terrier</span>
-          </div>
-          <label for="">any of these words:</label>
-          <input class="adv-search" type="text" name="" id="" />
-          <div class="help-text">
-            Type the important words:
-            <span class="example-search">tri-colour rat terrier</span>
-          </div>
+          <div class="hr"></div>
         </div>
       </form>
     </main>

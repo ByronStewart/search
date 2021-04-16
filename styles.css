@@ -26,8 +26,16 @@ a {
   text-decoration: none;
   color: var(--text-primary);
 }
-a:visited {
+.navbar a:visited {
   color: var(--text-primary);
+}
+.navbar a:hover,
+.navbar a:focus {
+  text-decoration: underline;
+}
+
+.mt-2 {
+  margin-top: 2.8rem;
 }
 
 input[type="text"] {
@@ -70,14 +78,23 @@ input[type="submit"]:focus {
   background: rgba(0, 0, 0, 0);
   padding: 0;
   margin: 0;
+  background: none;
 }
+.hidden-btn[type="submit"]:focus {
+  box-shadow: none;
+  outline: none;
+}
+#submiter {
+  box-shadow: none;
+  outline: none;
+}
+/* 
 .hidden-btn {
   display: inline;
-  background: none;
   padding: 0;
   margin: 0;
   cursor: pointer;
-}
+} */
 
 .hidden-btn:focus {
   outline: none;
@@ -211,6 +228,7 @@ nav .navbar-left {
 .container {
   padding: 2rem 4rem;
   margin-bottom: 1rem;
+  max-width: 1100px;
 }
 .container h2 {
   color: var(--text-red);
@@ -224,28 +242,64 @@ nav .navbar-left {
 }
 .form-grid {
   display: grid;
-  grid-template-columns: 4fr 9fr 6fr;
+  grid-template-columns: 16rem 7fr 6fr;
   font-size: 1.3rem;
   gap: 1rem;
+  margin-bottom: 2rem;
 }
 .form-grid .help-text,
 .example-search {
   font-size: 1.1rem;
 }
 input[type="text"].adv-search {
-  padding: 0rem;
+  padding: 0rem 1rem;
   margin: 0.4rem 0rem;
 }
+input[type="text"].adv-search:focus {
+  outline: none;
+  border: 1px solid var(--text-blue);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.4) inset;
+}
+
 .form-grid label,
 .form-grid div,
 .form-grid input {
   padding: 1rem 0rem;
 }
-.form-heading {
+.form-grid .form-heading {
   font-weight: 500;
   font-size: 1.6rem;
+  margin-bottom: 0;
+  padding: 0;
 }
-.form-explanation {
+.form-grid .form-explanation {
   font-weight: 600;
   color: var(--text-lighter);
+  margin-bottom: 0;
+  padding: 0;
+}
+.form-grid .form-submit {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0;
+}
+.btn-secondary {
+  padding: 0.6rem 1.2rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+  background-color: var(--text-blue);
+  outline: none;
+}
+.btn-secondary:hover,
+.btn-secondary:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2) inset;
+}
+.example-search {
+  font-family: monospace;
+}
+.help-text.two-line {
+  padding: 0;
+  padding-top: 0.5rem;
 }
